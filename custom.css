@@ -87,6 +87,14 @@ p a{
     .children li{
       border: 0px;
     }
+    blockquote {
+      margin: 1em 1em;
+      border-left:2px solid #21FFBC;
+    }
+    blockquote p{
+      font-style: italic;
+      font-size: 15px;
+    }
 
 
 /* Right Nav */
@@ -159,6 +167,14 @@ p a{
       font-size: 11px;
       font-family: Maven Pro;
     }
+    .entry-footer{
+      /*border-bottom: 2px solid #e1e1e1;*/
+      font-size: 12px;
+      color: #ccc;
+    }
+    .entry-footer a{
+      color:#ccc;
+    }
 
 
 /* Comments */
@@ -174,6 +190,7 @@ p a{
 
 .post-navigation{
   background: #bcbcbc;
+    background: #547FFF;
   padding: 2em;
     margin-top: 3em;
   padding-bottom: 4em;

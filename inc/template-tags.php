@@ -7,13 +7,13 @@
  * @package cmh3258
  */
 
-if ( ! function_exists( 'the_posts_navigation' ) ) :
+if ( ! function_exists( 'posts_navigation' ) ) :
 /**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function the_posts_navigation() {
+function posts_navigation() {
 	// Don't print empty markup if there's only one page.
 	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 		return;
@@ -37,13 +37,13 @@ function the_posts_navigation() {
 }
 endif;
 
-if ( ! function_exists( 'the_post_navigation' ) ) :
+if ( ! function_exists( 'post_navigation' ) ) :
 /**
  * Display navigation to next/previous post when applicable.
  *
  * @todo Remove this function when WordPress 4.3 is released.
  */
-function the_post_navigation() {
+function post_navigation() {
 	// Don't print empty markup if there's nowhere to navigate.
 	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 	$next     = get_adjacent_post( false, '', false );
@@ -56,8 +56,8 @@ function the_post_navigation() {
 		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'cmh3258' ); ?></h2>
 		<div class="nav-links">
 			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
-				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+				previous_post_link( '<div class="nav-previous">%link</div>', '<span class="read-previous-next">< Previous</span> %title' );
+				next_post_link( '<div class="nav-next">%link</div>', '%title <span class="read-previous-next">Next ></span>' );
 			?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -107,7 +107,8 @@ function cmh3258_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'cmh3258' ) );
 		if ( $categories_list && cmh3258_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'cmh3258' ) . '</span>', $categories_list );
+			//posted in in %1$s
+			printf( '<span class="cat-links">' . __( '%1$s', 'cmh3258' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */

@@ -52,14 +52,14 @@ get_header(); ?>
 		<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
-			<?php the_post_navigation(); ?>
+			<?php post_navigation(); ?>
 
 	</div><!-- #primary -->
 
 	</div>
 
 </div>
-<div class="col-md-2">
+<div class="">
 <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

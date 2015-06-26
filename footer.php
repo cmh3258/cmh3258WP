@@ -10,8 +10,8 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer white bg-black top8"  role="contentinfo">
-    <div class="px2 py3 container">
+	<footer id="colophon" class="site-footer white bg-black"  role="contentinfo">
+    <div class="">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'cmh3258' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'cmh3258' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

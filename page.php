@@ -59,7 +59,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 </div>
 </div>
-<div class="col-md-2">
+<div class="">
 <?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

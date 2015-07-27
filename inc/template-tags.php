@@ -24,11 +24,11 @@ function posts_navigation() {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'cmh3258' ) ); ?></div>
+			<div class="nav-previous"><?php next_post_link( __( 'Older posts', 'cmh3258' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'cmh3258' ) ); ?></div>
+			<div class="nav-next"><?php previous_post_link( __( 'Newer posts', 'cmh3258' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->

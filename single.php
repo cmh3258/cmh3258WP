@@ -36,6 +36,8 @@ get_header(); ?>
 			
 	<?php endif; ?>
 
+	<!-- <h1>hi</h1> -->
+
 	<div class="ourContent">
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -49,16 +51,22 @@ get_header(); ?>
 				endif;
 			?>
 
+			<?php posts_navigation(); ?>
+			<div class="previousPostBox">
+				<?php previous_post(); ?>    
+			</div>
+			<div class="nextPostBox">
+				<?php next_post(); ?>
+			</div>
+
 		<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
-			<?php post_navigation(); ?>
 
 	</div><!-- #primary -->
 
 	</div>
 
-</div>
 <div class="">
 <?php get_sidebar(); ?>
 </div>

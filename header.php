@@ -30,8 +30,9 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+<!--<script type="text/javascript" src="<?php bloginfo('stylesheet_directory'); ?>/js/frontpage.js"></script>-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
 <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
@@ -54,15 +55,12 @@
 				<!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
 			<!-- </div>.site-branding  -->
 		<!-- </div> -->
-			<nav id="site-navigation" class="main-navigation" role="navigation">
+			<nav id="site-navigation" class="" role="navigation">
 				<ul>
-        <li class="logo">Chris Hume</li>
-        <li><a href="#about-preview">About</a></li>
-        <li>Blog</li>
-        <li>Holler</li>
-      </ul>
+          <li class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+        </ul>
 
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'cmh3258' ); ?></button>
+				<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'cmh3258' ); ?></button> -->
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!--#site-navigation-->
 		</div>

@@ -30,7 +30,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php posts_navigation(); ?>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

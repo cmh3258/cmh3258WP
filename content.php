@@ -58,6 +58,8 @@
 			) );
 		?>
 	</div><!-- .entry-content -->
+
+	
 	<footer class="entry-footer">
 			<?php cmh3258_posted_on(); ?>
 

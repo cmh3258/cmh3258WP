@@ -1,5 +1,5 @@
 
-(function($){
+/*(function($){
     $(document).ready(function(){
       // alert('hi')
       $( "#hello" ).fadeIn("slow", function(){
@@ -18,4 +18,4 @@
         // $('nav').css('display','none');
       }
     });
-})(jQuery);
+})(jQuery);*/

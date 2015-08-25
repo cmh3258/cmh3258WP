@@ -41,7 +41,7 @@ get_header(); ?>
 	</div><!-- #primary -->
 </div>
 </div>
-<div class="col-md-2">
+<div>
 <?php get_sidebar(); ?>
 </div>
 </div>

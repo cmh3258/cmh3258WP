@@ -14,10 +14,10 @@ h1,h2,h3,h4,h5,h6{
   font-family: PT Sans;
 }
 p{
-  font-family: 'Quattrocento Sans';
-  color: #5e5e5e;
-  font-size: 19px;
-  line-height: 34px
+  font-family: Quattrocento;
+  color: #292C33;
+  font-size: 18px;
+  line-height: 32px;
 }
 #hello{
   color:white;
@@ -33,11 +33,11 @@ p{
   display: none;
   letter-spacing: 5px;
 }
-div:nth-child(2){
+/*div:nth-child(2){
   position: relative;
-}
+}*/
 a, a:visited {
-  color: #4a4a4a;
+  color: #292C33;
   text-decoration: none;
 }
 a{
@@ -53,19 +53,19 @@ a:hover{
 /* nav */
   nav{
     font-family: PT Sans;
-    width: 100%;
+    /*width: 100%;*/
     padding: 2px;
-    background-color: #FFEB3B;
-    background-color: #FF715E;
-    display: none;
-    position: fixed;
-      z-index: 10;
-          padding: 8px;
-          margin-top: 2em;
-      /*margin-top:-32em;*/
+    /*background-color: #FFEB3B;*/
+    /*background-color: #FF715E;*/
+    /*display: none;*/
+    /*position: fixed;*/
+    /*z-index: 10;*/
+    padding: 8px;
+    /*margin-top: 2em;*/
+    /*width: 30%;*/
+    margin: 0 auto;
 
-  }
-  .blog nav{
+ 
     display: inline-block;
   }
   nav ul{
@@ -78,8 +78,12 @@ a:hover{
     display: inline;
     /*padding: 1em;*/
       padding: 5px 14px;
-    font-family: 'Quattrocento Sans';
+    font-family: 'Quattrocento';
     color: #2E2E2E;
+  }
+  .menu ul{
+    margin-top:1em;
+    margin: 0 auto;
   }
   .logo{
     font-family: 'Maven Pro';
@@ -114,13 +118,17 @@ a:hover{
   }
 
 /* About */
+  h1{
+    font-family: Maven Pro;
+    font-size:2em;
+  }
   h2{
     font-family: Maven Pro;
     font-style: italic;
     font-size:2em;
   }
   .profilePicture{
-    width:10em;
+    width:4em;
   }
   .harvest{
     color: #FF6633 !important;
@@ -141,15 +149,26 @@ a:hover{
   .linkedIn{
     color: #0084BF !important;
   }
+  #Medium-logo-dark500{
+    fill: red;
+
+  }
   .about-preview{
     width: 100%;
     margin: 0 auto;
     padding: 5em 0 5em;
   }
+  .about-preview h1, .about-preview p{
+    margin: 0;
+  }
+  .about-preview p{
+    font-size: 17px;
+  }
+
   .readMore{
     text-decoration: underline;
     font-style: italic;
-    color:#4a4a4a;
+    color:#292C33;
   }
   .about-preview ul{
     padding: 0;
@@ -159,14 +178,14 @@ a:hover{
   .about-preview hr{
     width:80%;
     margin: 0 auto;
-    color: #4a4a4a;
+    color: #292C33;
     margin-top:3em;
   }
   .about-preview ul li{
-    /*display: inline;*/
+    display: inline;
     list-style-type: none;
-    font-family: Quattrocento Sans;
-    padding:1em;
+    font-family: Quattrocento;
+    /*padding:1em;*/
     font-size: 1em;
     text-decoration: none;
     letter-spacing: 3px;
@@ -235,9 +254,11 @@ a:hover{
       margin:0 auto;
     }
     #preview-posts article{
-      width: 32%;
-      float:left;
+      /*width: 32%;*/
+      /*float:left;*/
       padding: 2em;
+      width: 70%;
+      margin:0 auto;
     }
     #preview-posts .entry-title, 
     #preview-posts .entry-title a{
@@ -259,17 +280,17 @@ a:hover{
 
   /* */
   #content{
-    margin-top:2em;
+    /*margin-top:2em;*/
   }
   #primary{
-    margin-top: 4em;
+    /*margin-top: 4em;*/
   }
   /*.site-content{
     width:85%;
     margin:0 auto;
   }*/
   #main{
-    width: 55%;
+    width: 86%;
     margin: 0 auto;
   }
 
@@ -279,11 +300,18 @@ a:hover{
       max-width: 100%;
       width: 100%;
     }
-    .entry-title, .entry-title a{
+    .entry-title{
       font-family: 'Maven Pro';
       font-weight: 600;
-      font-size: 2em;
-      color: #4a4a4a;
+      font-size: 2.3em;
+      color: #292C33;
+      text-decoration: none;
+    }
+    .entry-title a{
+      font-family: 'Maven Pro';
+      font-weight: 600;
+      font-size: 1em;
+      color: #292C33;
       text-decoration: none;
     }
     .entry-content{
@@ -296,34 +324,52 @@ a:hover{
     /* Previous and Next Box */
     .previousPostBox{
       padding: 1em;
-      background-color: #F82359;
+      /*background-color: #292C33;*/
       text-align: center;
+      /*color: white;*/
+      width: 100%;
+      float: left;
     } 
     .nextPostBox{
       padding: 1em;
-      background-color: #FFC64D;
+      /*background-color: #FF715E;*/
+      color:#292C33;
       text-align: center;
       margin-bottom: 1em;
     }
     .previousPostBox a,
     .nextPostBox a{
       font-family: Maven Pro;
+      text-decoration: underline;
+
     }
     .previousPostBox a:hover,
     .nextPostBox a:hover{
-      color: white;
+      color: #FF715E;
     } 
+    .media-caption{
+      font-size: 12px;
+      font-style: italic;
+      padding: 0;
+      margin: 0;
+    }
 
 /* Footer */
   footer{
     padding:1em;
-    background-color: #4a4a4a;
-    color: #d1d1d1;
+    background-color: #3B3B3B;
+    color: white;
     text-align: center;
-      text-align: left;
+      /*text-align: left;*/
   }
   footer a{
     color: #9b9b9b !important;
+  }
+  .site-info{
+    font-size: 12px;
+  }
+  .frontPage{
+    text-align: center;
   }
 
   .entry-footer{
@@ -340,7 +386,7 @@ a:hover{
     margin-top:1em;
   }
   .entry-footer span a{
-    font-family: Quattrocento Sans;
+    font-family: Quattrocento;
     font-size: 1em;
     text-decoration: none;
     letter-spacing: 3px;
@@ -350,12 +396,37 @@ a:hover{
 /* secondary nav */
 #secondary{
   overflow: auto;
-  background-color: #e1e1e1;
+  /*background-color: #e1e1e1;*/
+  background-color: #737373;
+  margin-top: 5em;
+  padding: 1em;
+}
+#secondary h1{
+  font-size: 1em;
 }
 #secondary aside{
   display: inline;
   float: left;
-  padding: 2em;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 0;
+  padding-left:1em;
+}
+.socialMediaIcon{
+  width: 48px;
+  padding: 13px;
+}
+#secondary ul{
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: 25px;
+  margin-bottom: 0;
+}
+#secondary ul li a{
+  font-size: 14px;
+}
+#blog_subscription-2{
+  width: 100%;
 }
 
 
@@ -370,11 +441,11 @@ blockquote p{
 }
 
 ul, li{
-  font-family: Quattrocento Sans;
+  font-family: Quattrocento;
 }
 
 
-@media (min-width: 681px){
+/*@media (min-width: 681px){
   .about-preview ul li{
     display: inline;
   }
@@ -390,8 +461,53 @@ ul, li{
     margin: 0 auto;
   }
 }
+*/
+@media (min-width: 550px){
+  #secondary{
+    padding-bottom: 3em;
+  }
+  #secondary aside{
+    width: initial;
+  }
+}
 
+@media (min-width: 900px){
+  /*#main{
+    width: 70%;
+  }*/
+  #blog_subscription-2{
+    width: 37% !important;
+  }
+  /* Footer */
+  #secondary aside{
+    display: inline;
+    float: left;
+    padding: 2em 2em 0px 2em;
+  }
+  .socialMediaIcon{
+    width: 48px;
+    padding: 13px;
+  }
+  #secondary ul{
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: 25px;
+    margin-bottom: 0;
+  }
+}
 
+@media (min-width: 1200px){
+  /*#main{
+    width: 49%;
+  }*/
+  #main{
+    width: 60%;
+  }
+  .ourContent{
+    width: 85%;
+    margin: 0 auto;
+  }
+}
 
 
 

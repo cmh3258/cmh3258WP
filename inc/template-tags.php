@@ -92,7 +92,7 @@ function cmh3258_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'. '</span>';
 
 }
 endif;
@@ -105,26 +105,25 @@ function cmh3258_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'cmh3258' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'cmh3258' ) );
 		if ( $categories_list && cmh3258_categorized_blog() ) {
-			//posted in in %1$s
-			printf( '<span class="cat-links">' . __( '%1$s', 'cmh3258' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'cmh3258' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'cmh3258' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'cmh3258' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'cmh3258' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'cmh3258' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'cmh3258' ), __( '1 Comment', 'cmh3258' ), __( '% Comments', 'cmh3258' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'cmh3258' ), esc_html__( '1 Comment', 'cmh3258' ), esc_html__( '% Comments', 'cmh3258' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'cmh3258' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'cmh3258' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 

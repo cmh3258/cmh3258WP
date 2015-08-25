@@ -136,6 +136,8 @@ function custom_style_sheet() {
 }
 add_action('wp_enqueue_scripts', 'custom_style_sheet');
 
+
+
 /**
  * Implement the Custom Header feature.
  */
